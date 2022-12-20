@@ -34,20 +34,28 @@ Console.WriteLine("Введите натуральное целое число")
 
 a = int.Parse(System.Console.ReadLine()!);
 
-int threeOut = BringThreeOut1(a);
-int threeOut1 = BringThreeOut2(a);
-int threeOut2 = BringThreeOut3(a);
+int threeOut = BringThreeOut(a);
+int threeOut1 = BringThreeOut1(a);
+int threeOut2 = BringThreeOut2(a);
+int threeOut3 = BringThreeOut3(a);
 
-if (a >= 1000 && a <= 9999)
+if (a >= 100 && a <= 999)
+{
+    System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut(a)}");
+}
+else if (a >= 1000 && a <= 9999)
 {
     System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut1(a)}");
 }
-else if (a >= 10000 && a <= 99999){
+else if (a >= 10000 && a <= 99999)
+{
     System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut2(a)}");
 }
-else if (a >= 100000 && a <= 999999){
-    System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut3(a)}");
+else if (a >= 100000 && a <= 999999)
+{
+    System.Console.WriteLine($"Третья цифры числа {a} - {BringThreeOut3(a)}");
 }
-else {
-    System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut(a)}");
+else
+ {
+    System.Console.WriteLine($"Третей цифры числа {a} - нет");
 }
