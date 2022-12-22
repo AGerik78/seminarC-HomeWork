@@ -8,6 +8,8 @@
 32679 -> 6
 */
 
+
+/*
 int BringThreeOut(int number)
 {
     return number % 10;
@@ -27,18 +29,12 @@ int BringThreeOut3(int number)
 {
     return number / 1000 % 10;
 }
+*/
 
-int a;
-
-Console.WriteLine("Введите натуральное целое число");
-
-a = int.Parse(System.Console.ReadLine()!);
-
-int threeOut = BringThreeOut(a);
-int threeOut1 = BringThreeOut1(a);
-int threeOut2 = BringThreeOut2(a);
-int threeOut3 = BringThreeOut3(a);
-
+//int threeOut1 = BringThreeOut1(a);
+//int threeOut2 = BringThreeOut2(a);
+//int threeOut3 = BringThreeOut3(a);
+/*
 if (a >= 100 && a <= 999)
 {
     System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut(a)}");
@@ -56,6 +52,60 @@ else if (a >= 100000 && a <= 999999)
     System.Console.WriteLine($"Третья цифры числа {a} - {BringThreeOut3(a)}");
 }
 else
- {
+{
     System.Console.WriteLine($"Третей цифры числа {a} - нет");
 }
+*/
+int BringThreeOut(int number)
+{
+    int i = 0;
+    while (number >= 1000)    // || number <= -1000
+    {
+        number = number / 10;
+        i++;
+    }
+    {
+        number = number % 10;
+    }
+    return number;
+}
+
+Console.WriteLine("Введите натуральное целое число");
+
+int a;
+
+a = int.Parse(System.Console.ReadLine()!);
+
+int threeOut = BringThreeOut(a);
+
+if (a >= 100)   // || a <= -100
+{
+    System.Console.WriteLine($"Третья цифра числа {a} - {BringThreeOut(threeOut)}");
+}
+else
+{
+    System.Console.WriteLine($"Третей цифры числа {a} - нет");
+}
+
+
+
+/*
+int[] array = { 5, 12, 31, 14, 15, 16, 17, 18 };
+
+int n = array.Length;
+
+int find = 12;
+
+int index = 0;
+
+while (index < n)
+{
+    if(array[index] == find)
+    {
+        Console.WriteLine(index);
+        break;
+    }
+    index++;
+}
+*/
+
