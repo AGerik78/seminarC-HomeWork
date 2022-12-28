@@ -1,4 +1,17 @@
-﻿int n = int.Parse(System.Console.ReadLine()!);
+﻿// Нахождение кубов последовательности n
+/*
+int n = int.Parse(System.Console.ReadLine()!);
+
+int i = 1;
+
+while (i <= n)
+{
+    System.Console.WriteLine(i * i * i + ", ");
+    i++;
+}
+*/
+
+int n = int.Parse(System.Console.ReadLine()!);
 
 int i = -n;
 
@@ -7,6 +20,19 @@ while (i <= n)
     System.Console.WriteLine(i + ", ");
     i++;
 }
+
+// Нахождение квадратов последовательности n
+/*
+int n = int.Parse(System.Console.ReadLine()!);
+
+int i = 1;
+
+while (i <= n)
+{
+    System.Console.WriteLine(i * i + ", ");
+    i++;
+}
+*/
 
 /*int a, b;
 
