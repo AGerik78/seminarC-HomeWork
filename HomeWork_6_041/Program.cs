@@ -41,15 +41,15 @@ int[] StringToNum(string input)
 
         while (input [i] != ',')
         {
-        if(i != input.Length - 1)
+        if(i == input.Length - 1)
         {
             temp += input [i].ToString();
-            i++;
+            break;
         }
         else
         {
             temp += input [i].ToString();
-            break;
+            i++;
         }
         }
         numbers[index] = Convert.ToInt32(temp);
@@ -57,7 +57,6 @@ int[] StringToNum(string input)
     }
     return numbers;
 }
-
 
 void PrintArray(int[] array)
 {
